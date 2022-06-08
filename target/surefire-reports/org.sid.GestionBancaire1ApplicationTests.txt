@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: org.sid.GestionBancaire1ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 81.439 s <<< FAILURE! - in org.sid.GestionBancaire1ApplicationTests
+contextLoads  Time elapsed: 0.02 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ldapContextSource' defined in class path resource [org/springframework/boot/autoconfigure/ldap/LdapAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ldap.core.support.LdapContextSource]: Factory method 'ldapContextSource' threw exception; nested exception is java.lang.IllegalAccessError: class org.springframework.ldap.core.support.AbstractContextSource (in unnamed module @0x70e8f8e) cannot access class com.sun.jndi.ldap.LdapCtxFactory (in module java.naming) because module java.naming does not export com.sun.jndi.ldap to unnamed module @0x70e8f8e
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ldap.core.support.LdapContextSource]: Factory method 'ldapContextSource' threw exception; nested exception is java.lang.IllegalAccessError: class org.springframework.ldap.core.support.AbstractContextSource (in unnamed module @0x70e8f8e) cannot access class com.sun.jndi.ldap.LdapCtxFactory (in module java.naming) because module java.naming does not export com.sun.jndi.ldap to unnamed module @0x70e8f8e
+Caused by: java.lang.IllegalAccessError: class org.springframework.ldap.core.support.AbstractContextSource (in unnamed module @0x70e8f8e) cannot access class com.sun.jndi.ldap.LdapCtxFactory (in module java.naming) because module java.naming does not export com.sun.jndi.ldap to unnamed module @0x70e8f8e
+
